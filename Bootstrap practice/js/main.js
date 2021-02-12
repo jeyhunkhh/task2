@@ -43,8 +43,14 @@ items.forEach((item)=>{
 let openIcon = document.querySelector(".menu .open-icon")
 let sidebar = document.querySelector(".sidebar")
 let ulList = document.querySelector(".menu ul")
+let closeIcon = document.querySelector(".sidebar .close-icon")
 
 openIcon.addEventListener("click",function(){
     sidebar.classList.remove("close")
     ulList.classList.add("flex-box")
+})
+
+closeIcon.addEventListener("click",function(){
+    sidebar.classList.add("close")
+    ulList.classList.remove("flex-box")
 })
