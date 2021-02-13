@@ -54,3 +54,27 @@ closeIcon.addEventListener("click",function(){
     sidebar.classList.add("close")
     ulList.classList.remove("flex-box")
 })
+
+let accordion = document.querySelectorAll(".accordion")
+
+accordion.forEach(item=>{
+    item.addEventListener("click",function(){
+        if(this.nextElementSibling.style.display == "none"){
+            this.nextElementSibling.style.display = "block"
+            this.classList.add("act")
+            this.firstElementChild.classList.replace("fa-plus","fa-minus")
+            accordion.forEach(e=>{
+                if(e !== this){
+                    e.classList.remove("act")
+                    e.nextElementSibling.style.display = "none"
+                    e.firstElementChild.classList.replace("fa-minus","fa-plus")
+                }
+            })
+        }else{
+            this.classList.remove("act")
+            this.nextElementSibling.style.display = "none"
+            this.firstElementChild.classList.replace("fa-minus","fa-plus")
+        }       
+    })
+})
+

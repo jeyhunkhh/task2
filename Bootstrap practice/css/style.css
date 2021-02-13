@@ -191,4 +191,7 @@
     overflow: hidden;
   }
 
+.accordion.act{
+    background-color: teal !important;
+}
 
