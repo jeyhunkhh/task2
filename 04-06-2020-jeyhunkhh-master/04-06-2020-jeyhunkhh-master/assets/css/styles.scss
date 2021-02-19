@@ -1,0 +1,19 @@
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/animate';
+@import 'common/font';
+@import 'common/reset';
+@import 'common/buttons';
+// sections
+
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/back_to_top';
+
+// pages
+@import 'pages/homepage';
+
+
+// Responsive
+
+@import 'sections/responsive';
